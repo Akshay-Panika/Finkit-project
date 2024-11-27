@@ -1,4 +1,5 @@
 import 'package:finkit_project/custom_widget/bottomnav_widget.dart';
+import 'package:finkit_project/screen_folder/intro_screen.dart';
 import 'package:finkit_project/screen_folder/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
@@ -15,13 +16,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return  GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: '/SplashScreen',
+      initialRoute: '/splashScreen',
       getPages: [
-        GetPage(name: '/SplashScreen', page: () =>  const SplashScreen(),),
-        GetPage(name: '/BottomNavWidget', page: () =>   BottomNavWidget(),),
-        // GetPage(name: '/signIn', page: () =>   SignInScreen(),),
-        // GetPage(name: '/signup', page: () =>   SignupScreen(),),
-        // GetPage(name: '/bottomNav', page: () =>  BottomNav(),),
+        GetPage(name: '/splashScreen', page: () =>   SplashScreen(),),
+        GetPage(name: '/introScreen', page: () =>   IntroScreen(),),
+        GetPage(name: '/bottomNavWidget', page: () =>   BottomNavWidget(),),
       ],
     );
   }

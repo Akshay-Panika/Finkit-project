@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 
-class SplashGetXController extends GetxController{
+class GetXSplashController extends GetxController{
   @override
   void onInit() {
     super.onInit();
@@ -9,6 +9,6 @@ class SplashGetXController extends GetxController{
 
   void _navigateToHome()async{
     await Future.delayed(const Duration(seconds: 3));
-    Get.offNamed('/BottomNavWidget');
+    Get.offNamed('/introScreen');
   }
 }

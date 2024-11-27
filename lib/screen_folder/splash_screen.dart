@@ -1,8 +1,13 @@
 import 'package:finkit_project/custom_widget/hw_widget.dart';
-import 'package:finkit_project/custom_widget/textstyle_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+
+import '../getx_controller/getx_splash_controller.dart';
 class SplashScreen extends StatelessWidget {
-  const SplashScreen({super.key});
+  SplashScreen({super.key});
+
+  final GetXSplashController splashGetXController = Get.put(GetXSplashController());
 
   @override
   Widget build(BuildContext context) {
@@ -14,9 +19,9 @@ class SplashScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Center(child: Image.asset('assets/images/MasterCard2.png', height: 150,)),
+            Center(child: Image.asset('assets/images/MasterCard2.png', height: 120,)),
             20.height,
-            Text("We Offer Virtual Prepaid Mastercard", style: textStyle16(fontWeight: FontWeight.bold),),
+            const Text("We Offer Virtual Prepaid Mastercard", style: TextStyle(fontWeight: FontWeight.bold),),
           ],
         ),
       ),

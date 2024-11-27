@@ -7,13 +7,10 @@ class AppbarWidget extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Padding(
-      padding: const EdgeInsets.all(10),
-      child: AppBar(
-        title: const Text("Master Card"),
-        titleTextStyle: textStyle20(fontWeight: FontWeight.w600),
-        backgroundColor: ColorWidget.deepOrange100,
-      ),
+    return  AppBar(
+      title: const Text("LifeLineCard"),
+      titleTextStyle: const TextStyle(color: Colors.black, fontSize: 20,fontWeight: FontWeight.bold),
+      backgroundColor: ColorWidget.colorGreen100,
     );
   }
 
