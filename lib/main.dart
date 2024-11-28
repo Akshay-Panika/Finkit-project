@@ -1,5 +1,6 @@
-import 'package:finkit_project/custom_widget/bottomnav_widget.dart';
+import 'package:finkit_project/build_widget/build_bottom_nav.dart';
 import 'package:finkit_project/screen_folder/intro_screen.dart';
+import 'package:finkit_project/screen_folder/lifelinecard_limit_screen.dart';
 import 'package:finkit_project/screen_folder/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
@@ -19,8 +20,8 @@ class MyApp extends StatelessWidget {
       initialRoute: '/splashScreen',
       getPages: [
         GetPage(name: '/splashScreen', page: () =>   SplashScreen(),),
-        GetPage(name: '/introScreen', page: () =>   IntroScreen(),),
-        GetPage(name: '/bottomNavWidget', page: () =>   BottomNavWidget(),),
+        GetPage(name: '/introScreen', page: () =>   const IntroScreen(),),
+        GetPage(name: '/bottomNavWidget', page: () =>   BuildBottomNav(),),
       ],
     );
   }

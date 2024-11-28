@@ -4,25 +4,29 @@ import 'package:get/get.dart';
 import 'package:motion_tab_bar/MotionTabBar.dart';
 import '../getx_controller/getx_bottomnav_controller.dart';
 import '../screen_folder/home_screen.dart';
-import 'appbar_widget.dart';
+import '../screen_folder/lifelinecard_limit_screen.dart';
+import '../screen_folder/lifelinecard_wallet_screen.dart';
+import '../screen_folder/wallet_screen.dart';
+import 'build_appbar.dart';
 
 
-class BottomNavWidget extends StatelessWidget {
+class BuildBottomNav extends StatelessWidget {
 
-  BottomNavWidget({super.key,});
+  BuildBottomNav({super.key,});
 
   final BottomNavGetXController bottomNavController = Get.put(BottomNavGetXController());
 
   final List<Widget> _screen = [
     HomeScreen(),
-    HomeScreen(),
-    HomeScreen(),
+    LifelineCardLimitScreen(),
+    WalletScreen(),
+    LifelineCardWalletScreen(),
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppbarWidget(),
+      appBar: BuildAppbar(),
       body:  Expanded(child: Obx(() => _screen[bottomNavController.selectedIndex.value],)),
 
 
@@ -31,8 +35,8 @@ class BottomNavWidget extends StatelessWidget {
         tabBarHeight: 50,
         tabSize: 40,
         initialSelectedTab: "Home",
-        labels: const ["Home", "Home", "Home"],
-        icons: const [Icons.home, Icons.home, Icons.home],
+        labels: const ["Home", "Card Limit", "Wallet", "Wallet2"],
+        icons: const [Icons.home, Icons.credit_card, Icons.wallet, Icons.wallet],
         textStyle: const TextStyle(color: Colors.black,fontSize: 13),
         tabSelectedColor: Colors.black54,
         tabIconColor: Colors.grey,

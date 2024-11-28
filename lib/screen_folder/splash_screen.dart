@@ -19,7 +19,8 @@ class SplashScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Center(child: Image.asset('assets/images/MasterCard2.png', height: 120,)),
+            const Text("LifeLineCard", style: TextStyle(fontSize: 25,color: Colors.green, fontWeight: FontWeight.bold),),
+            //Center(child: Image.asset('assets/images/MasterCard2.png', height: 120,)),
             20.height,
             const Text("We Offer Virtual Prepaid Mastercard", style: TextStyle(fontWeight: FontWeight.bold),),
           ],
